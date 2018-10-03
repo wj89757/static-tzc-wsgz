@@ -1,0 +1,242 @@
+#top{
+	border-bottom:0 solid #C2D5E3;
+}	
+#top .top_a{
+	padding:10px 0 0 0;
+	background-color:#6666ff;/*:#2a323d;*/
+	height:100px;
+}
+#top .top_a h2{
+	position:absolute;
+	left:500px;
+	top:30px;
+	font-family:"叶根友毛笔行书2.0版";
+	font-size:40px;
+	color:#CF0;
+}
+#top .top_a p{
+	position:absolute;
+	left:600px;
+	top:70px;
+	font-family:"微软雅黑";
+	font-size:18px;
+	color:#FFF;
+}
+#top .top_a img{
+	position:absolute;
+	left:365px;
+	width:expresstion(this.width>100 ? 100 :true);
+	height:expresstion(this.height>100 ? 100 :true);
+	max-height:100px;
+	max-width:100px;
+	display:block;
+	}
+#top .top_b {
+	background-color: #9999ff;
+	display: block;
+	font-family: 'Microsoft Yahei', Simsun;
+	font-size: 16px;
+	height: 60px;
+	line-height: 16px;
+	padding:10px 0px;
+	word-wrap: break-word;
+}
+.top_b .wb{
+	position:relative;
+	margin:0px 163px;
+	width:960px;
+	height:60px;
+}
+.top_b .wb_info{
+	line-height:60px;
+	width:auto;
+	clear:left;
+	color:#FFF;
+}
+.top_b .wb_table{
+	position: absolute;
+	empty-cells: show;
+	display: table;
+	right: 50px;
+	width: 361px;
+	height: 60px;
+	top: 0px;
+}
+.wb_table .wb_t_a{
+	border-collapse: collapse;
+	display: table-cell;
+	width: 80px;
+	cursor: pointer;
+	display:inline-block;
+	text-align:center;
+	box-shadow:none;
+	vertical-align: middle;
+	text-transform: none;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-property: all;
+	transition-timing-function: ease;	
+}
+.wb_t_a .wb_btn{
+	background-color: rgb(255, 248, 158);
+	border-radius:50px;
+	cursor: pointer;
+	display:inline-block;
+	line-height:65px;
+	margin:0px 5px;
+	text-align:center;
+	width:60px;
+	height:60px;
+	border:none;
+	cursor:pointer;	
+}
+.wb_btn em{
+	font-family:"微软雅黑";
+	font-size:16px;
+	font-weight:bold;
+	color:#666;
+}
+.wb_t_a .wb_bty{
+	background-color:#e4bf00;
+	border-radius:50px;
+	width:60px;
+	height:60px;
+	margin:0px 5px;
+}
+.wb_bty a{
+	font-family:"微软雅黑";
+	color:#FFF;
+	font-weight:bold;
+	font-size:16px;
+	line-height:60px;
+}
+.wb_table .wb_t_c{
+	width:165px;
+	height:45px;
+	display: table-cell;
+	float:right;
+}
+.wb_t_c .wb_c{
+	border-left:1px solid #00CCCC;
+	width:165px;
+	height:45px;
+	padding:10px 0px;
+}
+.wb_c p{
+	position:absolute;
+	top:10px;
+	height:16px;
+	width:165px;
+	font-size:14px;
+	font-family:"微软雅黑";
+	color:#F90;
+	margin-left:10px;
+	padding:0px;
+}
+.wb_c span{
+	margin:20px 10px;
+}
+#top .top_c{
+	height:40px;
+	background-color:#ccccff;
+	background-repeat:repeat-x;
+}
+
+#middle{
+	margin-top:20px;
+	margin-left:165px;
+	width:960px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+}
+#middle p{ 
+	position:absolute;
+	bottom:10px;
+	font-family:"叶根友毛笔行书2.0版";
+	font-size:48px;
+	color:#CCC;
+	right:20px;
+	z-index:10;
+}
+#middle ul{ position:absolute;left:0px;top:0px; z-index:5;}
+#middle ul li{float:left; list-style:none; display:inline-block; }
+#middle img{
+	max-width:960px;
+	/*max-height:280px;*/
+	
+	width:expresstion(this.width>960 ? 960 : true);
+	/*height:expresstion(this.height>280 ? 280 :true);*/
+}
+#bottom{
+	margin-top:10px;
+	margin-left:165px;
+	width:960px;
+	height:70px;
+	position:absolute;
+}
+#bottom li{
+	list-style:none;
+	float:left;
+	border:1px #CCCCCC solid;
+	background:#FFF;
+	font-size:14px;
+	color:#999;
+	border-radius:20px;
+}
+#bottom li img{
+	max-width:60px;
+	max-height:60px;
+	width:expresstion(this.width > 60 && this.height < this.width ? 128: true);
+	height:expresstion(this.height>60?60:true);
+	padding-top:10px;
+	padding-left:10px;
+	display:block;
+}
+#bottom li a{
+	position:absolute;
+	top:18px;
+	left:70px;
+	display:block;
+	float:left;
+	width:150px;
+	height:80px;
+}
+#bottom li a h3{
+	font-weight:bold;
+	font-size:16px;
+	color:#000;
+}
+#bottom .bo_box1{
+	position:relative;
+	width:223px;
+	height:80px;
+	margin-right:20px;
+}
+#bottom .bo_box2{
+	position:relative;
+	width:223px;
+	height:80px;
+	margin-right:20px;
+}
+#bottom .bo_box3{
+	position:relative;
+	width:223px;
+	height:80px;
+	margin-right:20px;
+}
+#bottom .bo_box4{
+	position:relative;
+	width:223px;
+	height:80px;
+}
+
+#mainer-inner{
+	display:none;
+}
+#login{
+	position:absolute;
+	z-index:100;	
+	top:40px;
+	display:none;
+}

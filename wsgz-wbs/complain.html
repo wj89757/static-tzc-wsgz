@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线投诉</title>
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/style-com.css" />
+</head>
+
+<body>
+<table id="com_box">
+	<tbody>
+    	<tr>
+        	<td class="mov" id="Online" onmouseover="Mover('Online')" onmouseout="Mout('Online')">在线投诉</td>
+        </tr>
+        <tr>
+        	<td class="fro_box">
+           	 	<div class="group">
+                	<lable class="group_p" style="float:left;">投诉人</lable>
+                    <div class="course">
+                   	<input id="ComPeople" type="text" name="people" ></input>
+                    </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">手机号</lable>
+                    <div class="course">
+                   	<input id="ComPhone" type="tel" name="phone" ></input>
+                    </div>
+                </div>
+            	<div class="group">
+                	<lable class="group_p">地点</lable>
+                    <div class="course"><input id="ComAddress" type="text" name="address" /> </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">投诉坐标</lable>
+                    <div class="course"><input id="ComPoint" type="text" name="point" /> </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">投诉原因</lable>
+                    <div class="course">
+                    <select id="ComReason" name="reason">
+                    	<option value="路面积水">路面积水</option>
+                        <option value="河面垃圾">河面垃圾</option>
+                        <option value="水异味">水异味</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">投诉内容</lable>
+                    <div class="course">
+                   	<textarea id="ComContent" name="content" placeholder="五百字以内！"></textarea>
+                    <span class="help">还能输入500个字。</span>
+                    </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">相关图片</lable>
+                    <div class="course">
+                   	<input id="ComPhoto" type="file" name="photo" ></input>
+                    <span class="help">(5M以内，支持jpg、png、jpeg格式图片)</span>
+                    </div>
+                </div>
+                <div class="group">
+                	<lable class="group_p">建议内容</lable>
+                    <div class="course">
+                   	<textarea id="ComAdvice" name="advice" placeholder="五百字以内！"></textarea>
+                    </div>
+                </div>
+              	
+              	<!--<div class="group">
+                	<lable class="group_p" style="float:left;">投诉人</lable>
+                    <div class="course">
+                   	<input id="ComPeople" type="text" name="people" ></input>
+                    </div>
+                </div>-->
+                <div class="group">
+                	<div class="course" >
+                    <input id="ComSub" type="submit" class="btn" name="" value="提交" onmouseover="Mover('ComSub')" onmouseout="Mout('ComSub')"/>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<script>
+	function Mover(name){
+		var oDiv=document.getElementById(name);
+		oDiv.style.background="#3CF";
+		oDiv.style.color="#FFF";
+		};
+	function Mout(name){
+		var oDiv=document.getElementById(name);
+		oDiv.style.background="#FFF";
+		oDiv.style.color="black";
+		};	
+</script>
+</body>
+</html>

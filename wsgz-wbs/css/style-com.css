@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+#com_box{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#fff;
+	border:1px solid #CCC;
+	border-radius:30px;
+}
+#com_box .mov{
+	line-height:30px;
+	cursor:move;
+	height:100%;
+	border-top-right-radius:30px;
+	border-top-left-radius:30px;
+	border-bottom:1px dashed #CCCCCC;
+	/*border-radius:30px;*/
+	/*background:#0FC;*/
+	text-align:center;
+	font-size:18px;
+	color:#003;
+}
+#com_box .fro_box{
+	line-height:30px;
+	height:100%;;
+	width:100%;
+	padding:10px;
+	display:inline-block;
+	max-height: 900px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/*background:#0FF;*/
+}
+#com_box .group{
+	margin-bottom:20px;
+	font-size:16px;
+	height:40px;
+	display:block;
+}
+.group .group_p{
+	width:80%;
+	text-align:left;
+	font-weight:500;
+	margin:5px 5px 5px 5px;
+	float:left;
+}
+.group .course{
+	display:block;
+	margin-left:20px;
+	/*background:#0FF;*/
+	height:auto;
+	width:80%;
+	float:left;
+	padding:5px;
+}
+.course input ,select ,textarea{
+	height:25px;
+	width:100%;
+	border:1px solid #CCC;
+	border-radius:5px;
+}
+.course ,textarea{
+	height:120px;
+	width:100%;
+}
+.course .help{
+	font-size:12px;
+	color:#666;
+}
+.course .btn{
+	margin:20px 50px 20px 0;
+	height:40px;
+	width:90px;
+	border:1px solid #CCC;
+	border-radius:5px;
+	cursor:pointer;
+	text-align:center;
+}

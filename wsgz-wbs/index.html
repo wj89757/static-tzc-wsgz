@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>(仿)静溪社区</title>
+    <meta name="五水共治" http-equiv="Content-Type"  content="text/html; charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/reg.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="../JS/base.js" type="text/javascript" ></script>
+</head>
+
+<body>
+	<div id="top">
+    	<div class="top_a"><img src="img/五水共治logo.png"/><h2>治来水</h2><p>————为五水共治而来!</p></div>
+        <div class="top_b">
+        	<div class="wb">
+            	<div class="wb_info">治来水，为五水共治而来!</div>
+                <form method="post" action="">
+                <table  border="0" cellpadding="0" cellspacing="0" class="wb_table">
+                	<tbody>
+                    <tr>
+                    	<td class="wb_t_a"><a class="wb_btn" tabindex="" onclick="showsomething('login')"><em>登录</em></a></td>
+                        <td class="wb_t_a"><div class="wb_bty" id="one" onMouseOver="over()" onMouseOut="out()"><a onClick="showsomething('mainer-inner')">注册</a></div></td>
+                        <script>
+						function showsomething(name){
+							var oDiv=document.getElementById(name);
+							oDiv.style.display='block';
+						}
+						function over(){
+							var lo=document.getElementById('one');
+							lo.style.background="#FC0";
+						};
+						function out(){
+							var lo=document.getElementById('one');
+							lo.style.background="#F90";
+						};
+						</script>
+                      <td class="wb_t_c">
+                        	<div class="wb_c">
+                            	<p>合作伙伴</p>
+                                <span><a href=""><img src="img/qq_login.gif"></a></span>
+                            </div>
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </form>
+            </div>
+        </div>
+        <div class="top_c"></div>
+    </div>
+    <div id="middle">
+    <ul>
+    <li><img src="img/index/1436864689346.jpg" alt="秘境" /></li>
+    <li><img src="img/index/babea3d6c03f45d7.jpg" alt="黄昏之后" /></li>
+    <li><img src="img/index/dadfd45edbf85bbe.jpg" alt="简单的极致" /></li>
+    <li><img src="img/index/20150830_173644_030.jpg" alt="美丽星空" /></li>
+    </ul>
+     <p onClick="rollRight()"></p>
+   	
+    </div>
+    <script>
+    window.onload=function()
+	{
+		var arr=[
+		"秘境",
+		"黄昏之后",
+		"简单的极致",
+		"美丽星空"];
+		var oDiv=document.getElementById('middle');
+		var oSpan=oDiv.getElementsByTagName('p');
+		var oCla=oDiv.getElementsByTagName('ul')[0];
+		var oImg=oCla.getElementsByTagName('li');
+		oCla.innerHTML=oCla.innerHTML+oCla.innerHTML;
+		oCla.style.width=(oImg[0].offsetWidth*oImg.length)+'px';
+		var iTar=0;
+		var i=0;
+		oSpan[0].innerHTML=arr[i]+i;
+		/*var timer=null;
+		startMove(oCla,'left',iTar);
+		alert(oCla.offsetLeft);*/
+		function rollLeft(){
+		if(oCla.offsetLeft<=-oCla.offsetWidth/2 ){
+				oCla.style.left='0'+'px';
+				iTar=0;
+				i=0;
+				oSpan[0].innerHTML=arr[0]+i;
+				}
+			i==3?i=0:++i;
+			iTar=iTar-960;
+			oSpan[0].innerHTML=arr[i]+i;
+			/*alert(iTar);*/
+			startMove(oCla,'left',iTar);
+			
+			};
+			
+		  /*function rollRight(){
+	  	  if(oCla.offsetLeft<=-oCla.offsetWidth/2 ){
+			  oCla.style.left='0'+'px';
+			  iTar=0;
+			  i=0;
+			  oSpan[0].innerHTML=arr[0]+i;
+			  }
+		  i==0?i=3:--i;
+		  iTar=iTar+960;
+		  oSpan[0].innerHTML=arr[i]+i;
+		  /*alert(iTar);
+		  startMove(oCla,'left',iTar);
+		  };*/
+		  
+		var timer=setInterval(rollLeft,3000);		
+		oCla.onmouseover=function(){
+			clearInterval(timer);
+			};
+		oCla.onmouseout=function(){
+			timer=setInterval(rollLeft,3000);	
+			};
+		/*oSpan[0].onmouseover()=function{	
+			timer=setInterval(rollRight,3000);
+			};
+			alert(speed);*/
+			
+		
+	};
+    </script>
+    <div id="bottom">
+    	<ul>
+        	<li class="bo_box1">
+            <img src="img/warning_128px_512019_easyicon.net.png">
+            <a href="complain.html">	<h3>在线投诉</h3>Complaints Online</a>
+            </li>
+          	<li class="bo_box2">
+          	<img src="img/warning_128px_512019_easyicon.net.png">
+           	<a href="records.html">	<h3>投诉信息展示</h3>Complaints Online</a>
+            </li>
+          	<li class="bo_box3">
+            <img src="img/warning_128px_512019_easyicon.net.png">
+            <a href="information.html">	<h3>综合信息会展</h3>Complaints Online</a>
+            </li>
+          	<li class="bo_box4">
+            <img src="img/warning_128px_512019_easyicon.net.png">
+            <a href="baike.html">	<h3>治水百科</h3>Complaints Online</a>
+            </li>
+        </ul>
+    </div>
+    <div id="mainer-inner">
+            <div id="area-reg">
+            <div class="bg-login">
+            <div class="area-reg">
+            <form id="form-reg" class="form">
+            <h3 class="title">五水共治</h3>
+            
+            <div class="area">
+            <input id="ipt-name-reg" name="username" spellcheck="false" type="text" data-name="用户名" placeholder="请输入用户名" data-direction="right" autocomplete="off" class="mobile l">
+            <span class="clearfix"></span>
+            </div>
+           
+            <div class="area">
+            <input id="ipt-num-reg" name="userphone" spellcheck="false" type="text" data-name="手机号" data-direction="right" placeholder="请输入手机号" data-length="2,16" class="regname name l">
+            <span class="clearfix"></span>
+            </div>
+           
+            <div class="area">
+            <input id="ipt-pwd-reg" name="password" type="password" data-name="密码" data-length="6,32" data-direction="right" placeholder="请输入密码" class="password l">
+            <span class="clearfix"></span>
+            </div>
+            
+            <div class="area">
+            <input id="ipt-repwd-reg" name="password2" type="password" data-name="确认密码" data-length="6,32" data-direction="right" placeholder="确认密码" class="re-password l">
+            <span class="clearfix"></span>
+            </div>
+            
+            <div class="area">
+           <input id="send-mobile-code" type="button" value="发送验证码" disabled="disabled" class="dis">
+            <input id="ipt-mobile-code" name="code" type="text" data-name="手机验证码" data-length="6,6" data-direction="right" placeholder="手机验证码" class="mcode l">
+            <span class="clearfix"></span>
+            </div>
+            
+            <div class="area area-agree">
+            <input id="ipt-agree-reg" type="checkbox" checked="checked" class="l agree">
+            <label for="ipt-agree-reg" class="agree-b">我已经认真阅读并同意<a href="/info/#page=agreement" target="_blank">《使用协议》</a>。</label>
+            </br>
+            <a href="#" style="font-size:15px" class="back-login">返回登录</a>
+            <span class="clearfix"></span>
+            </div>
+            
+            <div class="area-tool">
+            <a class="do login-btn primary">注册</a>
+            <p>
+            <div id="launchBtn" class="launchBtn bg hidden"></div>
+            </p>
+            <span class="clearfix"></span>
+            </div>
+            </form>
+            <p id="shut" onClick="Shoudown('mainer-inner')">关闭</p>
+            </div>
+            </div>
+            <span class="clearfix"></span>
+            </div>
+      </div>
+    <div id="login">
+    	<div id="area-reg">
+            <div class="bg-login">
+            <div class="area-reg">
+            <form id="form-login" class="form">
+            <h3 class="title">五水共治</h3>
+            <div class="area">
+            <input id="ipt-name-login" name="username" spellcheck="false" type="text" data-name="用户名" placeholder="请输入用户名" data-direction="right" autocomplete="off" class="mobile l">
+            <span class="clearfix"></span>
+            </div>
+            
+            <div class="area">
+            <input id="ipt-pwd-login" name="password" type="password" data-name="密码" data-length="6,32" data-direction="right" placeholder="请输入密码" class="password l">
+            <span class="clearfix"></span>
+            </div>
+            
+             <div class="area-tool">
+            <a class="do login-btn primary">登录</a>
+            <p>
+            <div id="launchBtn" class="launchBtn bg hidden"></div>
+            </p>
+            <span class="clearfix"></span>
+            </div>
+            </form>
+            <p id="shut" onClick="Shoudown('login')">关闭</p>
+            </div>
+            </div>
+		</div>
+	</div>
+      <script>
+      function Shoudown(name){var oDiv=document.getElementById(name);oDiv.style.display='none';};
+      </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Information</title>
+<link rel="stylesheet" type="text/css" href="css/style-info.css" />
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<script>
+window.onload=function()
+{
+	var oDiv=document.getElementById('left');
+	var oLi=oDiv.getElementsByTagName('ul')[0].getElementsByTagName('li');
+	var oRi=document.getElementById('right');
+	var bColor="#DDD";
+	/*alert(oLi.length);*/
+	for(var i=0;i<oLi.length;i++)
+	{
+		oLi[i].onmouseover=function()
+		{
+			bColor=this.style.background;
+			this.style.background="#CCC";
+			this.style.cursor="pointer";
+		}
+		oLi[i].onmouseout=function()
+		{	
+			this.style.background=bColor;
+		}
+		oLi[i].onclick=function()
+		{
+			for(var j=0;j<oLi.length;j++)
+			{
+				oLi[j].style.background="#DDD";
+			}
+			this.style.background="#bea4a4";
+			bColor="#bea4a4";
+			oRi.innerHTML="展示"+this.innerHTML+"内容";
+			/*index[i]=0;*/
+			/*alert(this);*/
+		};
+	}
+	/*alert(oLi[2].innerHTML);*/
+};
+</script>
+</head>
+
+<body>
+<div id="top"><div class="logo"><img src="img/五水共治logo.png" /></div></div>
+<div id="left">
+<ul>
+	<li><img src="img/0032-book.png" />河道信息</li>
+	<!--<li><img src="img/0032-book.png" />水库信息</li>-->
+	<li><img src="img/0032-book.png" />节水企业</li>
+	<li><img src="img/0032-book.png" />治水项目</li>
+	<li><img src="img/0032-book.png" />沿线企业</li>
+</ul>
+</div>
+<div id="right"></div>
+</body>
+</html>

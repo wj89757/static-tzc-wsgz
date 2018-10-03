@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>治水百科</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/style-baike.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/SimpleTree.css"/>
+
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/SimpleTree.js"></script>
+
+<script type="text/javascript">
+window.onload=function()
+{
+	GetArr();
+	
+};
+function GetArr()
+{
+	var ArrL=new Array();
+	var ArrF=new Array();
+	for(var i=0;i<4;i++)
+	{
+		ArrL[i]=new Array();
+	}
+	ArrL[0]=["这里是","省市","政策","文件","展览","区域"];
+	ArrL[1]=["这里是","省市","简报","文件","展览","区域"];
+ 	ArrL[2]=["这里是","五水","共治办","文件","展览","区域"];
+	ArrL[3]=["这里是","治水","采纳","建议","展览","区域"];
+	ArrF=["省市政策文件","sszcwj","省市简报","ssjb","五水共治办","wsgzb","治水采纳建议","zscnjy"];
+	var oLeft=document.getElementById('left');
+	var oDiv=oLeft.getElementsByTagName('div');
+	var oUl=oDiv[0].getElementsByTagName('ul');
+	var oLi=oUl[0].getElementsByTagName('li');
+	var flag=0;
+	for(var i=0;i<4;i++){
+		var aUl=document.createElement('ul');
+		var aLi=document.createElement('li');
+		for(var j=0;j<ArrL[i].length;j++){
+			/*document.write(ArrL[i][j]);*/
+			aUl.innerHTML+='<li><a href="#">'+ArrL[i][j]+'</a></li>';
+			}
+			aLi.innerHTML='<a href="#" ref="'+ArrF[2*i+1]+'">'+ArrF[2*i]+'</a>'
+			oUl[0].appendChild(aLi);
+			oUl[0].appendChild(aUl);
+		}
+	$(".st_tree").SimpleTree({});
+};
+
+</script>
+</head>
+
+<body>
+<div id="top"><div class="logo"></div><span>治水百科搜索：<input type="text" name="keywords" id="key" placeholder="查询关键词" /></span></div>
+<div id="left">
+	<div class="st_tree" style="width:400px;margin:0 auto;">
+	<ul>
+	</ul>
+	</div>
+</div>
+<div id="copy-buttom"><span style=" position:absolute; top:10px;left:530px;font-size:14px;">台州学院五水共治项目组研制</span></div>
+</body>
+</html>
